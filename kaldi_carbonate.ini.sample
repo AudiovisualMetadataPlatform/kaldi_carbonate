@@ -1,0 +1,14 @@
+[remote]
+host = carbonate.uits.iu.edu
+port = 22
+workspace = /absolute/path/to/kaldi/workspace
+kaldi_sif = /absolute/path/to/kaldi/nvidia-kaldi-asr-1.1.sif
+
+[auth]
+user = your_user
+key_file = /absolute/path/to/id_rsa
+passphrase = pa$5phrase_for_1d_r5a
+
+[job]
+gres = gpu:v100:1
+partition = dl
