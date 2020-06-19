@@ -30,4 +30,5 @@ optional arguments:
 
 When this is run, a working directory is created for this particular instance and the input file copied to it.  A job file is created and submitted to the slurm queueing system that will start the singularity container with the right parameters AND create a finished file that has the return code of the container.   Then the program waits for the finished file to appear.  When it does, the files are copied from the remote system to the destinations specified on the command line.
 
-A 8-hour mp3 file took a total of 10 minutes to run, but 6m of that was transferring the content to the server (I'm on a VPN)
+A 8-hour mp3 file took a total of 10 minutes to run, but 6m of that was transferring the content to the server (I'm on a VPN).  Despite the performance gains, it will not always be faster than the local kaldi:  since Carbonate has few GPUs and they're shared amongst all researchers on campus, the kaldi job may be held until other jobs in the queue are processed.  I have seen delays of more than an hour during testing.
+
